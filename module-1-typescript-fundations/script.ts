@@ -9,3 +9,11 @@ const addTwo = (a: number, b: number): number => {
 };
 
 const ans = addTwo(1, 2);
+
+// Practice
+
+const myString2: string = "Hello";
+const num: number = 1212;
+const bool: boolean = false;
+const big: bigint = 121212n;
+const sym: symbol = Symbol();
