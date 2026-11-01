@@ -1,21 +1,19 @@
+//* Basic Data type
 let myString: string = "Hello World";
 let myNumber: number = 1212;
 let myBoolean: boolean = true;
 let myBigInt: bigint = 12n;
 let mySymbol: symbol = Symbol();
 
+//* Type Safe Function
 const addTwo = (a: number, b: number): number => {
   return a + b;
 };
 
 const ans = addTwo(1, 2);
 
-// Practice
+//* Array, Tuple & readonly modifier
+const arr: string[] = ["a", "b", "c"];
+const numArr: number[] = [11, 12];
 
-const myString2: string = "Hello";
-const num: number = 1212;
-const bool: boolean = false;
-const big: bigint = 121212n;
-const sym: symbol = Symbol();
-
-console.log(myString);
+const daLatLon: readonly [number, number] = [23.82, 90.42];
