@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src", // to store ts files
+    "outDir": "./dist", // to store js files
+
+    // Environment Settings
+    "module": "esnext", // latest ts
+    "target": "esnext",
+    "types": [],
+
+    // Recommended Options
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

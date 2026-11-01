@@ -17,3 +17,5 @@ const num: number = 1212;
 const bool: boolean = false;
 const big: bigint = 121212n;
 const sym: symbol = Symbol();
+
+console.log(myString);
