@@ -1,0 +1,10 @@
+"use strict";
+const isActive = true;
+const hasPermission = false;
+const decimal = 6;
+const hex = 0xf00d;
+const binary = 0b1010;
+const octal = 0o744;
+const float = 3.14;
+const color = "blue";
+const fullName = "John Doe";
