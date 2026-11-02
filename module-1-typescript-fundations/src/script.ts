@@ -39,7 +39,7 @@ const sum = (...numbers: number[]): number => {
   return numbers.reduce((total, sum) => total + sum, 0);
 };
 
-const ans = sum(1, 2, 3, 4, 5);
+// const ans = sum(1, 2, 3, 4, 5);
 
 const logUserAction = (
   ...args: [name: string, age: number, isActive: boolean] // add indicator in tuple
@@ -48,4 +48,51 @@ const logUserAction = (
   console.log(name + " is " + age);
 };
 
-logUserAction("Mir", 192, false);
+// logUserAction("Mir", 192, false);
+
+//* Type Alias
+
+type TAddress = {
+  street: string;
+  holding: number;
+};
+
+type TUser = {
+  name: string;
+  age: number;
+  isActive: boolean;
+  action: () => void;
+  badges: string[];
+  address: TAddress;
+};
+
+const user: TUser = {
+  name: "Asif",
+  age: 22,
+  isActive: true,
+  action: () => console.log("Hello"),
+  badges: ["abc", "def"],
+  address: {
+    holding: 1,
+    street: "Hazi Mohsin Road",
+  },
+};
+
+//* Interface
+interface IUser {
+  name: string;
+  email: string;
+  age: number;
+  isActive: boolean;
+  action: () => void;
+  badges: string[];
+}
+
+const user1: IUser = {
+  name: "Asif",
+  email: "asif@gmail.com",
+  age: 22,
+  isActive: true,
+  action: () => console.log("Hello"),
+  badges: ["abc", "def"],
+};
