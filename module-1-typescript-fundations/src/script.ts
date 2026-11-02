@@ -10,13 +10,14 @@ const addTwo = (a: number, b: number): number => {
   return a + b;
 };
 
-//* Array, Tuple & readonly modifier
+//* Array modifier
 const arr: string[] = ["a", "b", "c"];
 const numArr: number[] = [11, 12];
 
+//* Tuple & readonly modifier
 const daLatLon: readonly [number, number] = [23.82, 90.42];
 
-//* Optional, Default & Rest parameters
+//* Optional parameters
 const concatName = (firstName: string, lastName?: string): string => {
   if (!lastName) {
     return firstName;
@@ -24,10 +25,27 @@ const concatName = (firstName: string, lastName?: string): string => {
   return firstName + " " + lastName;
 };
 
-const ans = concatName("Asif");
+// const ans = concatName("Asif");
 
+//* Default parameters
 const greetings = (fullName: string, greeting = "hello"): void => {
   console.log(greeting + " " + fullName);
 };
 
-greetings("Mir");
+// greetings("Mir");
+
+//* Rest parameters
+const sum = (...numbers: number[]): number => {
+  return numbers.reduce((total, sum) => total + sum, 0);
+};
+
+const ans = sum(1, 2, 3, 4, 5);
+
+const logUserAction = (
+  ...args: [name: string, age: number, isActive: boolean] // add indicator in tuple
+) => {
+  const [name, age] = args;
+  console.log(name + " is " + age);
+};
+
+logUserAction("Mir", 192, false);
