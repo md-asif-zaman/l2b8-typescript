@@ -1,2 +1,1 @@
-const names: string[] = [];
-names.push("asif");
+const names: readonly string[] = ["Asif", "zaman"];

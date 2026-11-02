@@ -1,3 +1,2 @@
 "use strict";
-const names = [];
-names.push("asif");
+const names = ["Asif", "zaman"];
