@@ -1,17 +1,14 @@
-type Admin = {
-  id: number;
-  role: "admin";
-  privileges: string[];
-};
+type TId = number;
+type TRole = "admin" | "user";
 
-type User = {
-  id: number;
-  role: "user";
-  plans: string[];
-};
+interface IUser {
+  name: string;
+  id: TId;
+  role: TRole;
+}
 
-const user: User = {
-  id: 1,
+const user: IUser = {
+  name: "Asif",
+  id: 12,
   role: "user",
-  plans: ["sdsd"],
 };

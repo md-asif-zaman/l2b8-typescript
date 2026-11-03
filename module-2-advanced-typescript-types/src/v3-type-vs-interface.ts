@@ -5,13 +5,13 @@ type Id = number;
 
 type Role = "admin" | "member";
 
-interface User {
+interface IUser {
   name: string;
   id: Id;
   role: Role;
 }
 
-const user: User = {
+const user: IUser = {
   id: 123,
   name: "Abc",
   role: "admin",

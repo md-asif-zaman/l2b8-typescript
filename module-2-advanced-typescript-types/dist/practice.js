@@ -1,6 +1,6 @@
 const user = {
-    id: 1,
+    name: "Asif",
+    id: 12,
     role: "user",
-    plans: ["sdsd"],
 };
 export {};
