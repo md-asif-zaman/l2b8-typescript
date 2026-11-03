@@ -1,14 +1,12 @@
-type TId = number;
-type TRole = "admin" | "user";
-
-interface IUser {
-  name: string;
-  id: TId;
-  role: TRole;
+interface IAnimal {
+  species: string;
 }
 
-const user: IUser = {
-  name: "Asif",
-  id: 12,
-  role: "user",
+interface IDog extends IAnimal {
+  breed: string;
+}
+
+const dog: IDog = {
+  species: "Dogos",
+  breed: "Puppy",
 };

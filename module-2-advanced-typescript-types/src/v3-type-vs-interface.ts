@@ -19,11 +19,11 @@ const user: IUser = {
 
 // TODO: interface extends
 
-interface Animal {
+interface IAnimal {
   species: string;
 }
 
-interface Cat extends Animal {
+interface Cat extends IAnimal {
   breed: string;
 }
 
