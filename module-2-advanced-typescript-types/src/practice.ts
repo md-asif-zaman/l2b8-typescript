@@ -1,12 +1,6 @@
-interface IAnimal {
-  species: string;
-}
+const a = {
+  id: 1,
+  name: "Asd",
+} as const;
 
-interface IDog extends IAnimal {
-  breed: string;
-}
-
-const dog: IDog = {
-  species: "Dogos",
-  breed: "Puppy",
-};
+a.id = 2;
