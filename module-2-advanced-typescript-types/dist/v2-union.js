@@ -1,5 +1,9 @@
-const greetings = () => {
-    console.log("Hello World from v2 file");
+const status = "pending";
+const id = "1212";
+const userRole = "manager";
+const user = {
+    id: 1,
+    role: "member",
+    plans: ["C++", "C"],
 };
-greetings();
 export {};
