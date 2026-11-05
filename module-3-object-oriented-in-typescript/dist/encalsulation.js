@@ -10,9 +10,11 @@ class Employee {
         this.name = name;
         this._baseSalary = _baseSalary;
     }
+    //Getter
     get baseSalary() {
         return this._baseSalary;
     }
+    //Setter
     get salaryWithBonus() {
         return this._baseSalary + 5000;
     }
@@ -25,5 +27,4 @@ class Employee {
 }
 const employee1 = new Employee("Mir", 2000);
 employee1.baseSalary = 3000;
-console.log(employee1.salaryWithBonus);
 export {};
