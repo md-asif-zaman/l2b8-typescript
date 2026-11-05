@@ -8,4 +8,11 @@ class Employee {
 }
 const asif = new Employee("Asif", 22000);
 const mir = new Employee("Mir", 30000);
-export { };
+export {};
+//* Class short form
+// class Employee {
+//   constructor(
+//     public name: string,
+//     public _baseSalary: number,
+//   ) {}
+// }

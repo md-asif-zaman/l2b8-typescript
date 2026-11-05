@@ -1,7 +1,7 @@
 class Employee {
   constructor(
     public name: string,
-    private _baseSalary: number,
+    protected _baseSalary: number,
   ) {}
 
   //Getter
@@ -23,14 +23,31 @@ class Employee {
 }
 
 //* Inheritance
-class Manager extends Employee {
-  teamMemberCount: number;
+// class Manager extends Employee {
+//   teamMemberCount: number;
 
-  constructor(name: string, baseSalary: number, teamMemberCount: number) {
-    super(name, baseSalary);
-    this.teamMemberCount = teamMemberCount;
+//   constructor(name: string, _baseSalary: number, teamMemberCount: number) {
+//     super(name, _baseSalary);
+//     this.teamMemberCount = teamMemberCount;
+//   }
+// }
+
+class Manager extends Employee {
+  constructor(
+    name: string,
+    _baseSalary: number,
+    public teamMemberCount: number,
+  ) {
+    super(name, _baseSalary);
+  }
+
+  describeWork(): string {
+    return `${this.name} manages ${this.teamMemberCount} people`;
+  }
+
+  describeManager(): string {
+    return `${this.name} earns ${this._baseSalary} people`;
   }
 }
 
 const manager = new Manager("Mizan", 40000, 30);
-console.log(manager.baseSalary);

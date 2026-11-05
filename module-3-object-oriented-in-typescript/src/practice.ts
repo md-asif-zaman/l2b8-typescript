@@ -1,7 +1,7 @@
 class Employee {
   constructor(
     public name: string,
-    private _baseSalary: number,
+    protected _baseSalary: number,
   ) {}
 
   set baseSalary(salary: number) {
@@ -26,8 +26,12 @@ class Manager extends Employee {
     super(name, _baseSalary);
     this.employeeCount = employeeCount;
   }
+
+  describeSalary(): string {
+    return `Salary of ${this.name} is ${this._baseSalary}`;
+  }
 }
 
-const manager = new Manager("Asif", 23333, 22);
+const manager = new Manager("Asif", 23333, 34);
 
-console.log(manager.employeeCount);
+console.log(manager.describeSalary());

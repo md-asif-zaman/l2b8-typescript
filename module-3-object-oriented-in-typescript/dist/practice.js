@@ -24,7 +24,10 @@ class Manager extends Employee {
         super(name, _baseSalary);
         this.employeeCount = employeeCount;
     }
+    describeSalary() {
+        return `Salary of ${this.name} is ${this._baseSalary}`;
+    }
 }
-const manager = new Manager("Asif", 23333, 22);
-console.log(manager.employeeCount);
+const manager = new Manager("Asif", 23333, 34);
+console.log(manager.describeSalary());
 export {};

@@ -21,13 +21,25 @@ class Employee {
     }
 }
 //* Inheritance
+// class Manager extends Employee {
+//   teamMemberCount: number;
+//   constructor(name: string, _baseSalary: number, teamMemberCount: number) {
+//     super(name, _baseSalary);
+//     this.teamMemberCount = teamMemberCount;
+//   }
+// }
 class Manager extends Employee {
     teamMemberCount;
-    constructor(name, baseSalary, teamMemberCount) {
-        super(name, baseSalary);
+    constructor(name, _baseSalary, teamMemberCount) {
+        super(name, _baseSalary);
         this.teamMemberCount = teamMemberCount;
+    }
+    describeWork() {
+        return `${this.name} manages ${this.teamMemberCount} people`;
+    }
+    describeManager() {
+        return `${this.name} earns ${this._baseSalary} people`;
     }
 }
 const manager = new Manager("Mizan", 40000, 30);
-console.log(manager.baseSalary);
 export {};
