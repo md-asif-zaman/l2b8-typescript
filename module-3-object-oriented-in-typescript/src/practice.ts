@@ -1,27 +1,7 @@
-abstract class Employee {
-  constructor(
-    public name: string,
-    private _baseSalary: number,
-  ) {}
+type Environment = "development" | "staging" | "production";
 
-  get baseSalary(): number {
-    return this._baseSalary;
-  }
-
-  set baseSalary(newSalary: number) {
-    if (newSalary < 0) {
-      throw new Error("Salary can not be negative");
-    }
-    this._baseSalary = newSalary;
-  }
-
-  abstract calculatePay(): number;
-}
-
-class Manager extends Employee {
-  calculatePay(): number {
-    return this.baseSalary + 50000;
-  }
-}
-
-const asif = new Manager("Asid", 1233);
+const apis: Record<Environment, string> = {
+  development: "sadas",
+  production: "asdasd",
+  staging: "sadasd",
+};
