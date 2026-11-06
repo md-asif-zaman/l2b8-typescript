@@ -1,27 +1,27 @@
-class Employee {
+abstract class Employee {
   constructor(
     public name: string,
     private _baseSalary: number,
   ) {}
 
-  set baseSalary(newSalary: number) {
-    this._baseSalary = newSalary;
-  }
-
   get baseSalary(): number {
     return this._baseSalary;
   }
 
-  calculateSalary(tax: number): number {
-    return this._baseSalary - this._baseSalary * tax;
+  set baseSalary(newSalary: number) {
+    if (newSalary < 0) {
+      throw new Error("Salary can not be negative");
+    }
+    this._baseSalary = newSalary;
   }
+
+  abstract calculatePay(): number;
 }
 
 class Manager extends Employee {
-  override calculateSalary(): number {
-    return this.baseSalary + 5000;
+  calculatePay(): number {
+    return this.baseSalary + 50000;
   }
 }
 
-const emp = new Manager("Asif", 20000);
-console.log(emp.calculateSalary());
+const asif = new Manager("Asid", 1233);

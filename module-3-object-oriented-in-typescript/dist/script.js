@@ -2,4 +2,5 @@
 // import "./encalsulation.js";
 // import "./inheritance.js";
 // import "./polymorphism.js";
-import "./practice.js";
+import "./abstraction.js";
+// import "./practice.js";

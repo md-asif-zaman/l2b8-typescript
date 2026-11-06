@@ -28,8 +28,23 @@ class Manager extends Employee {
   }
 }
 
-const employee = new Employee("Mizan", 25000);
-const manager = new Manager("Mizan", 30000);
+class Developer extends Employee {
+  constructor(
+    name: string,
+    _baseSalary: number,
+    public type: string,
+  ) {
+    super(name, _baseSalary);
+  }
+  override calculatePay(): number {
+    return this.baseSalary + 3000;
+  }
+}
+
+const employee = new Employee("Mizan", 20000);
+const manager = new Manager("Mizan", 20000);
+const developer = new Developer("Foroz", 20000, "Backend");
 
 console.log(employee.calculatePay(0.1));
 console.log(manager.calculatePay());
+console.log(developer.calculatePay());

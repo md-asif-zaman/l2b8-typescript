@@ -25,8 +25,20 @@ class Manager extends Employee {
         return this.baseSalary + 5000;
     }
 }
-const employee = new Employee("Mizan", 25000);
-const manager = new Manager("Mizan", 30000);
+class Developer extends Employee {
+    type;
+    constructor(name, _baseSalary, type) {
+        super(name, _baseSalary);
+        this.type = type;
+    }
+    calculatePay() {
+        return this.baseSalary + 3000;
+    }
+}
+const employee = new Employee("Mizan", 20000);
+const manager = new Manager("Mizan", 20000);
+const developer = new Developer("Foroz", 20000, "Backend");
 console.log(employee.calculatePay(0.1));
 console.log(manager.calculatePay());
+console.log(developer.calculatePay());
 export {};

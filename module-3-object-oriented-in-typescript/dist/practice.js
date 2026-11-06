@@ -5,21 +5,20 @@ class Employee {
         this.name = name;
         this._baseSalary = _baseSalary;
     }
-    set baseSalary(newSalary) {
-        this._baseSalary = newSalary;
-    }
     get baseSalary() {
         return this._baseSalary;
     }
-    calculateSalary(tax) {
-        return this._baseSalary - this._baseSalary * tax;
+    set baseSalary(newSalary) {
+        if (newSalary < 0) {
+            throw new Error("Salary can not be negative");
+        }
+        this._baseSalary = newSalary;
     }
 }
 class Manager extends Employee {
-    calculateSalary() {
-        return this.baseSalary + 5000;
+    calculatePay() {
+        return this.baseSalary + 50000;
     }
 }
-const emp = new Manager("Asif", 20000);
-console.log(emp.calculateSalary());
+const asif = new Manager("Asid", 1233);
 export {};
