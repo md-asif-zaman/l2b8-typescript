@@ -21,6 +21,7 @@ class Employee {
 }
 
 //* Polymorphism
+// change calculatePay method
 class Manager extends Employee {
   override calculatePay(): number {
     return this.baseSalary + 5000;
@@ -32,6 +33,3 @@ const manager = new Manager("Mizan", 30000);
 
 console.log(employee.calculatePay(0.1));
 console.log(manager.calculatePay());
-
-// const employee = new Employee("Mir", 20000);
-// console.log(employee.calculatePay());
