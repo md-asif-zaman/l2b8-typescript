@@ -1,7 +1,9 @@
 type Environment = "development" | "staging" | "production";
 
-const apis: Record<Environment, string> = {
-  development: "sadas",
-  production: "asdasd",
-  staging: "sadasd",
+type RecordEnv = Record<Environment, string>;
+
+const env: RecordEnv = {
+  development: "sd",
+  production: "sdsd",
+  staging: "sds",
 };
