@@ -4,4 +4,5 @@
 // import "./v3-type-vs-interface.js";
 // import "./v5-special-types.js";
 // import "./v7-narrowing.js";
-import "./v-9-generic.js";
+// import "./v-9-generic.js";
+import "./practice.js";
