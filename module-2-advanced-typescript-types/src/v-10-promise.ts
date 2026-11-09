@@ -30,7 +30,7 @@ const fetchUser = async (): Promise<User | undefined> => {
     }
   }
 };
- 
+
 const userData = await fetchUser();
 
 if (userData) {
